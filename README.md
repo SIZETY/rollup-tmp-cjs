@@ -1,27 +1,4 @@
-# rollup esmodule
-
----
-
-esmodule 无法用 import 导入 .json 文件，rollup 中可以用 `@rollup/plugin-json` 插件解决
-
-```js
-import json from "@rollup/plugin-json";
-
-const pkg = JSON.parse(
-  readFileSync(new URL("../package.json", import.meta.url), "utf8")
-);
-
-```
-
----
-
-`package.json` 中的 type 属性可以用 `"module" | "commonjs"` 来区分是 `esmodule` 还是 `commonjs`
-
-```json
-{
-  "type": "commonjs",
-}
-```
+# rollup commonJS module
 
 ## 相关依赖
 
